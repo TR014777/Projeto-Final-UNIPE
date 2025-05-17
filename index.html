@@ -143,6 +143,8 @@
         <option value="AOA">Kwanza (AOA)</option>
     </select>
     <button id="trocar" type="button"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
+    </select><br>
+    <button id="trocar" type="button">Trocar moedas</button><br>
     <label>Para</label>
     <select id="moedaPara">
         <option value="BRL" selected>Real brasileiro (BRL)</option>
@@ -271,15 +273,14 @@
         <option value="AOA">Kwanza (AOA)</option>    
     </select>
     <button onclick="converter()"><i class="fa-solid fa-rotate-right"></i></button>
-
 </div>
 <div class="container-boxes">
         <div class="Resultadobox">
     <h1>Resultado da conversão</h1>
 <p id="erro"></p>
-
-
-
+    </select><br>
+    <button onclick="converter()">Converter</button>
+    <h2>Resultado da conversão</h2>
     <p id="erro"></p>
     <p id="conversaoDe"></p>
     <p id="conversaoDoValorDe"></p>
@@ -288,12 +289,14 @@
     <p id="conversaoDataDeCotacao"></p>
         </div>
     <div class="taxabox">   
-        <h3>Taxa:</h3>
-  
+        <h3>Taxa:</h3> 
     <p id="taxaDe"></p>
     <p id="taxaPara"></p>
     </div> 
 </div>
+    <h3>Taxa:</h3>
+    <p id="taxaDe"></p>
+    <p id="taxaPara"></p>
 </body>
 <script src="./scripts/script.js"></script>
 </html>
