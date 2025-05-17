@@ -6,12 +6,14 @@
     <title>Projeto Final</title>
     <link rel="stylesheet" href="./estilos/estilo.css">
     <link rel="icon" type="icone" href="./img/conversaositeicone.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <img src="./img/conversaositeicone.svg" alt="placeholder">
+<div class="caixa-cinza">
+    <img src="/img/conversaositeicone.svg" alt="placeholder">
     <h1>Conversor de moeda</h1>
     <label>Valor</label>
-    <input id="valor" value="1.00"><br>
+    <input id="valor" value="1.00">
     <label>Converter de</label>
     <select id="moedaDe">
         <option value="USD" selected>Dólar americano (USD)</option>
@@ -138,8 +140,8 @@
         <option value="MWK">Kwacha do Malawi (MWK)</option>
         <option value="ZMW">Kwacha zambiano (ZMW)</option>
         <option value="AOA">Kwanza (AOA)</option>
-    </select><br>
-    <button id="trocar" type="button">Trocar moedas</button><br>
+    </select>
+    <button id="trocar" type="button"><i class="fa-solid fa-arrow-right-arrow-left"></i></button>
     <label>Para</label>
     <select id="moedaPara">
         <option value="BRL" selected>Real brasileiro (BRL)</option>
@@ -266,18 +268,27 @@
         <option value="MWK">Kwacha do Malawi (MWK)</option>
         <option value="ZMW">Kwacha zambiano (ZMW)</option>
         <option value="AOA">Kwanza (AOA)</option>    
-    </select><br>
-    <button onclick="converter()">Converter</button>
-    <h2>Resultado da conversão</h2>
+    </select>
+    <button onclick="converter()"><i class="fa-solid fa-rotate-right"></i></button>
+</div>
+<div class="container-boxes">
+        <div class="Resultadobox">
+    <h1>Resultado da conversão</h1>
+<p id="erro"></p>
     <p id="erro"></p>
     <p id="conversaoDe"></p>
     <p id="conversaoDoValorDe"></p>
     <p id="conversaoPara"></p>
     <p id="conversaoDoValorPara"></p>
     <p id="conversaoDataDeCotacao"></p>
-    <h3>Taxa:</h3>
+        </div>
+    <div class="taxabox">   
+        <h3>Taxa:</h3>
+  
     <p id="taxaDe"></p>
     <p id="taxaPara"></p>
+    </div> 
+</div>
 </body>
 <script src="./scripts/script.js"></script>
 </html>
