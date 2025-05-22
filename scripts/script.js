@@ -55,12 +55,34 @@ try {
   document.getElementById('conversaoDataDeCotacao').innerText =  `Data da cotação utilizada: ${dataFormatada}`;
   document.getElementById('taxaDe').innerText =  `1 ${textoMoedaDe} = ${1 * taxa} ${textoMoedaPara}`;
   document.getElementById('taxaPara').innerText =  `1 ${textoMoedaPara} = ${1 * taxaPara} ${textoMoedaDe}`;
-  
+  adicionarLinha(moedaDe, valorDe, moedaPara, valorPara);
   //caso encontre algum erro, vai dar erro ué
   } catch (erro) {
     document.getElementById('erro').innerText = "Erro ao buscar a cotação.";
   }
+
+  
 }
+
+function adicionarLinha(moedaDe, valor, moedaPara, valorConvertido) {
+  // pegando a tabela
+  var tabela = document.getElementById('tabelaHistorico').getElementsByTagName('tbody')[0];
+  // variável para inserir linhas
+  var novaLinha = tabela.insertRow();
+
+  //criando a linha
+  var celulaMoedaDe = novaLinha.insertCell(0);
+  var celulaValor = novaLinha.insertCell(1);
+  var celulaMoedaPara = novaLinha.insertCell(2);
+  var celulaValorConvertido = novaLinha.insertCell(3);
+
+  // adicionando as células
+  celulaMoedaDe.textContent = moedaDe;
+  celulaValor.textContent = valor;
+  celulaMoedaPara.textContent = moedaPara;
+  celulaValorConvertido.textContent = valorConvertido;
+}
+
 
 //faz o revesamento da moeda de origem para moeda de destino, trocando de posição
 document.getElementById('trocar').addEventListener('click', function() {
