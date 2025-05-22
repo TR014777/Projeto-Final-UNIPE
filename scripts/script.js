@@ -65,6 +65,20 @@ try {
 }
 
 function adicionarLinha(moedaDe, valor, moedaPara, valorConvertido) {
+  //criando um objeto de data e hora
+  const agora = new Date();
+
+  //pegando os valores desse objeto
+  const dia = String(agora.getDate()).padStart(2, '0');           
+  const mes = String(agora.getMonth() + 1).padStart(2, '0');       
+  const ano = agora.getFullYear();
+
+  const horas = String(agora.getHours()).padStart(2, '0');
+  const minutos = String(agora.getMinutes()).padStart(2, '0');
+
+  //formatando em data e hora
+  const dataEHora = `${dia}/${mes}/${ano} ${horas}:${minutos}`;
+
   // pegando a tabela
   var tabela = document.getElementById('tabelaHistorico').getElementsByTagName('tbody')[0];
   // variável para inserir linhas
@@ -75,12 +89,14 @@ function adicionarLinha(moedaDe, valor, moedaPara, valorConvertido) {
   var celulaValor = novaLinha.insertCell(1);
   var celulaMoedaPara = novaLinha.insertCell(2);
   var celulaValorConvertido = novaLinha.insertCell(3);
+  var celulaDataEHora = novaLinha.insertCell(4);
 
   // adicionando as células
   celulaMoedaDe.textContent = moedaDe;
   celulaValor.textContent = valor;
   celulaMoedaPara.textContent = moedaPara;
   celulaValorConvertido.textContent = valorConvertido;
+  celulaDataEHora.textContent = dataEHora;
 }
 
 

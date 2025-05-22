@@ -272,22 +272,26 @@
     </select>
     <button onclick="converter()"><i class="fa-solid fa-rotate-right"></i></button>
 </div>
-<div class="container_historico">
+<div class="caixa-cinza">
     <h1>Histórico de conversões</h1>
-    <table id="tabelaHistorico" border="1">
-        <thead>
-            <tr>
-                <th>Moeda De</th>
-                <th>Valor Original</th>
-                <th>Moeda Para</th>
-                <th>Valor Convertido</th>
-            </tr>
-        </thead>
-        <tbody>
-        <!-- as conversões aparecerão aqui -->
-        </tbody>
-    </table>
+        <div class="scroll-historico">
+            <table id="tabelaHistorico" border="1">
+                <thead>
+                    <tr>
+                        <th>Moeda De</th>
+                        <th>Valor Original</th>
+                        <th>Moeda Para</th>
+                        <th>Valor Convertido</th>
+                        <th>Data e Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!-- as conversões aparecerão aqui -->
+                </tbody>
+            </table>
+        </div>
 </div>
+
 <div class="container-boxes">
     <div class="Resultadobox">
         <p id="erro"></p>
