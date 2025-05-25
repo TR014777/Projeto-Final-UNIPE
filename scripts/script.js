@@ -112,4 +112,13 @@ document.getElementById('trocar').addEventListener('click', function() {
   converter()
 });
 
+//copiar o valor convertido
+document.getElementById('copiarConversao').addEventListener('click', function() {
+  var textoComValor = document.getElementById("conversaoDoValorPara").innerText;
+  //divide o texto em partes
+  var partes = textoComValor.split(": ");
+  var valorConvertido = partes[1];  // "$ -,--"
+  navigator.clipboard.writeText(valorConvertido)
+});
+
 converter()
