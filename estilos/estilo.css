@@ -1,18 +1,30 @@
-<<<<<<< Updated upstream
-=======
+.cabecalho-logo {
+    margin-top: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+}
+
+.cabecalho-logoicone {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.cabecalho-nomesite {
+    margin: 0px;
+    padding: 14px;
+}
+
 body {
     font-family: sans-serif;
-    margin: 50px;
-    padding: 50px;
+    margin: auto;
+    margin-top: 0px;
+    padding: auto;
+    padding-top: 0px;
     background-color: white;
     color: black;
     text-align: center; 
-}
-
-img {
-    width: 100px; 
-    height: auto;
-    margin-bottom: 10px;
 }
 
 h1 {
@@ -119,6 +131,13 @@ h2 {
     margin-top: 30px;
 }
 
+.scroll-historico {
+    height: 30vh;
+    max-height: 30vh; 
+    overflow-y: auto; 
+    border: 1px solid #ccc;
+}
+
 
 #erro{
     text-align: center;
@@ -180,6 +199,7 @@ h3 {
     text-align: center;
 }
 .caixa-cinza {
+    margin: 50px;
     background-color: lightgray; 
     padding: 10px; 
     border-radius: 1px; 
@@ -196,6 +216,7 @@ h3 {
 
 .Resultadobox {
     background-color: lightgray;
+    margin: 50px;
     padding: 10px;
     border-radius: 1px;
     text-align: center;
@@ -207,6 +228,7 @@ h3 {
 
 .taxabox {
     background-color: lightgray;
+    margin: 50px;
     padding: 20px;
     border-radius: 2px;
     text-align: center;
@@ -214,4 +236,22 @@ h3 {
     margin-left: 5px; 
     flex-grow: 1;
 }
->>>>>>> Stashed changes
+
+footer {
+    margin: auto;
+    font-size: 0.75em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightgray;
+}
+
+.rodape-texto {
+    padding: 20px 0px 20px 20px;
+    text-align: start;
+}
+
+.rodape-info {
+    padding: 20px 20px 20px 0px;
+    text-align: end;
+}
