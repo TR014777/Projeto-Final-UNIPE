@@ -10,7 +10,7 @@ O **Conversor de Moedas DAPE** é uma aplicação web que permite a conversão d
 - Moeda de origem e destino
 - Taxas de câmbio utilizadas
 - Data da cotação
-- (Futuramente) Histórico de conversões realizadas
+- Histórico de conversões realizadas
 
 ## 👥 Equipe de Desenvolvimento
 
@@ -23,7 +23,7 @@ O **Conversor de Moedas DAPE** é uma aplicação web que permite a conversão d
 
 - ✅ Conversão de moedas em tempo real
 - ✅ Exibição dos dados da conversão
-- 🔄 Histórico de conversões (em desenvolvimento)
+- ✅ Histórico de conversões
 
 ---
 
