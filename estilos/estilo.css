@@ -36,6 +36,10 @@ header {
     padding: 14px;
 }
 
+h1 {
+    background-color: var(--cor-de-fundo);
+}
+
 body {
     font-family: Poppins;
     margin: auto;
