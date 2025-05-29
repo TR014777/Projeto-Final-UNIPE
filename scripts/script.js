@@ -121,4 +121,19 @@ document.getElementById('copiarConversao').addEventListener('click', function() 
   navigator.clipboard.writeText(valorConvertido)
 });
 
+document.getElementById('ativarModoEscuro').addEventListener('click', function() {
+  document.body.classList.toggle('modo-escuro');
+  const icone = document.getElementById('icone');
+  const lampada = document.getElementById('lampada')
+  if(document.body.classList.contains('modo-escuro')) {
+    icone.src = './img/conversaositeicone-claro.svg';
+    lampada.classList.remove('fa-solid');
+    lampada.classList.add('fa-regular');
+  } else {
+    icone.src = './img/conversaositeicone.svg';
+    lampada.classList.remove('fa-regular');
+    lampada.classList.add('fa-solid');
+  }
+});
+
 converter()

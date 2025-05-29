@@ -1,3 +1,21 @@
+:root {
+    --cor-de-fundo: #F5F5F5;
+    --cor-da-fonte: black;
+    --cor-da-borda: #cccccc;
+    --cor-do-botao: #00cf5c;
+    --cor-do-botao-hover: #009f49;
+    --cor-de-fundo-modo-escuro: #090A0A;
+    --cor-da-fonte-modo-escuro: white;
+    --cor-da-borda-modo-escuro: #333333;
+    --cor-hiperlink-modo-escuro: #379eff;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .cabecalho-logo {
     margin-top: 0;
     display: flex;
@@ -15,21 +33,58 @@
     margin: 0px;
     padding: 14px;
 }
+
 body {
     font-family: sans-serif;
     margin: auto;
     margin-top: 0px;
     padding: auto;
     padding-top: 0px;
-    background-color: white;
-    color: black;
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-da-fonte);
     text-align: center; 
 }
-h1{
-    color: black; 
+
+body.modo-escuro,
+body.modo-escuro .container-conversor,
+body.modo-escuro .section-resultadoEHistorico,
+body.modo-escuro .container-historico,
+body.modo-escuro .scroll-historico,
+body.modo-escuro .container-resultado,
+body.modo-escuro .de-box,
+body.modo-escuro .para-box,
+body.modo-escuro .section-taxa,
+body.modo-escuro .container-taxa{
+    background-color: var(--cor-de-fundo-modo-escuro);
+    color: var(--cor-da-fonte-modo-escuro);
+    border-color: var(--cor-da-borda-modo-escuro);
+}
+
+body.modo-escuro .fa-regular {
+    color: var(--cor-da-fonte-modo-escuro);
+}
+
+body.modo-escuro a {
+    color: var(--cor-hiperlink-modo-escuro)
+}
+
+body.modo-escuro .valor,
+body.modo-escuro .moedaDe,
+body.modo-escuro .moedaPara {
+    background-color: var(--cor-de-fundo-modo-escuro);
+    color: var(--cor-da-fonte-modo-escuro);
+    border-color: var(--cor-da-borda-modo-escuro);;
+}
+
+h1 {
+    color: var(--cor-da-fonte); 
     margin-bottom: 20px;
 }
 
+body.modo-escuro h1 {
+    background-color: var(--cor-de-fundo-modo-escuro);
+    color: var(--cor-da-fonte-modo-escuro);
+}
 
 label {
     display: block; 
@@ -41,9 +96,9 @@ label {
 #valor {
     width: 325px;
     padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #e9e9e9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor-da-borda);
     border-radius: 4px;
     box-sizing: border-box; 
 }
@@ -53,51 +108,18 @@ label {
 #moedaPara {
     width: 325px;
     padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #e9e9e9;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--cor-da-borda);
     border-radius: 4px;
     box-sizing: border-box;
 }
 
-
-#trocar {
-margin: 10px auto;
-    display: inline-block;
-    background-color: #00cf5c; 
-    color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    width: 100px; 
-    height: 40px;
-    font-size: 20px;
-}
-
-trocar:hover {
-    background-color: #009f49;  
-}
-
-trocar {
-    font-size: 0; 
-}
-
-trocar i {
-    font-size: 20px; 
-    color: white; 
-}
-
-button{
+.botao {
     margin: 10px auto;
     display: inline-block;
-    background-color: #00cf5c; 
-    color: white;
+    background-color: var(--cor-do-botao); 
+    color: var(--cor-de-fundo);
     padding: 10px 20px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -113,21 +135,31 @@ button{
 }
 
 
-button:hover {
-    background-color: #009f49; 
+.botao:hover {
+    background-color: var(--cor-do-botao-hover); 
 }
-button {
+.botao {
     font-size: 0; 
 }
-button i {
+.botao i {
     font-size: 20px;
-    color: white; 
+    color: var(--cor-de-fundo); 
 }
 
-h2 {
-    color: black;
-    margin-top: 30px;
+
+
+#ativarModoEscuro {
+    background-color: #00000000;
+    margin: 10px;
+    color: var(--cor-da-fonte);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    width: 50px; 
+    height: 50px;
+    font-size: 50px;
 }
+
 .scroll-historico {
     height: 30vh;
     max-height: 30vh; 
@@ -195,24 +227,42 @@ h3 {
     font-size: 16px;
     text-align: center;
 }
-.caixa-cinza {
-    background-color: white;
+
+.container-conversor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+}
+
+.section-resultadoEHistorico {
+    background-color: var(--cor-de-fundo);
     padding: 10px;
     border-radius: 4px;
     margin-top: 10px;
     text-align: center;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-around;
-    border: 1px solid #ccc; /* Borda cinza clara */
-    border-radius: 4px; /* Borda ligeiramente arredondada, se desejar */
+    justify-content: space-between;
+    border: 1px solid var(--cor-da-borda); 
+    border-radius: 4px; 
 }
 
-.caixa-cinza label,
-.caixa-cinza input,
-.caixa-cinza select,
-.caixa-cinza button {
+.container-resultado {
+    width: 100%;
+}
+
+.container-conversor label,
+.container-conversor input,
+.container-conversor select,
+.container-conversor button {
     margin-right: 10px;
     margin-bottom: 10px;
     flex: 1;
@@ -242,12 +292,17 @@ h3 {
     border: none;
 }
 footer {
+    height: 150px;
     margin: auto;
     font-size: 0.75em;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background-color: lightgray;
+}
+
+body.modo-escuro footer {
+    background-color: var(--cor-da-borda-modo-escuro);
 }
 
 .rodape-texto {
@@ -262,56 +317,78 @@ footer {
 
 
 
-.resultado-box {
-    width: 49.7%;
+.de-box, .para-box {
+    width: 40%;
     background-color: white;
-    height: 230px; /* Ajuste conforme necessário */
+    height: 80px;
     margin: 1px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--cor-da-borda);
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-   
-    
-    
-    
-}
-.para-box{
-    width: 49.9%;
-    background-color: white;
-    height: 230px; /* Ajuste conforme necessário */
-    margin: 1px;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-   
-    
-    
+    padding: 10px;
 }
 
-.taxa-box {
-    clear: both;
-    
+.de-box {
+    align-items: flex-start;
+}
+
+.para-box {
+    align-items: flex-end;
+}
+
+
+
+.section-taxa {
     background-color: white;
-    height: 200px; /* Ajuste conforme necessário */
     width: 100%;
     border: 1px solid #ccc;
     display: flex;
     justify-content: left;
     align-items: left;
     flex-direction: column;
-    
 }
-.container-pai{
-    height: 100%;
+
+.container-apenasResultado {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#copiarConversao {
+    position: relative;
+    left: 43%;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        text-align: center;
+    }
+
+    .container-conversor {
+        flex-direction: column;
+        align-items: middle;
+    }
+
+    .section-resultadoEHistorico {
+        flex-direction: column;
+    }
+
+    .container-apenasResultado {
+        flex-direction: column;
+        align-items: center;
+    }
     
+    .de-box, .para-box {
+        height: 120px;
+        width: 90%;
+        align-items: center;
+        margin: 3px;
+    }
 
 
+    #copiarConversao {
+        position: relative;
+        left: 0;
+    }
 }
