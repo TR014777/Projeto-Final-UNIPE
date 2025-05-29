@@ -125,6 +125,7 @@ document.getElementById('ativarModoEscuro').addEventListener('click', function()
   document.body.classList.toggle('modo-escuro');
   const icone = document.getElementById('icone');
   const lampada = document.getElementById('lampada')
+  //fazer checagem se está no modo escuro para mudar o icone
   if(document.body.classList.contains('modo-escuro')) {
     icone.src = './img/conversaositeicone-claro.svg';
     lampada.classList.remove('fa-solid');
